@@ -11,8 +11,7 @@ module.exports = {
       resolve: 'gatsby-source-sanity',
       options: {
         projectId: 't3zmvotc',
-        dataset: 'production',
-        watchMode: true
+        dataset: 'production'
       }
     },
     'gatsby-plugin-theme-ui'
