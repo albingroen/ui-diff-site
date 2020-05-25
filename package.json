@@ -11,7 +11,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --ignore-pattern '/build/*'",
+    "lint:fix": "yarn format && yarn lint --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "gatsby": "^2.21.37",
@@ -22,6 +25,14 @@
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
     "prettier": "2.0.5"
   },
   "repository": {
@@ -30,5 +41,10 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:fix && git add ."
+    }
   }
 }
