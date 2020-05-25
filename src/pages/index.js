@@ -1,5 +1,12 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx, Heading } from "theme-ui"
 
-export default function Home() {
-  return <div>Hello world!</div>
+const Home = () => {
+  return (
+    <header sx={{ backgroundColor: "primary", display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <Heading sx={{ color: 'background', fontSize: 7 }}>ui-diff</Heading>
+    </header>
+  )
 }
+
+export default Home

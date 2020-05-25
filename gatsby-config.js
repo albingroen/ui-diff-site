@@ -13,6 +13,7 @@ module.exports = {
         projectId: 't3zmvotc',
         dataset: 'production'
       }
-    }
+    },
+    'gatsby-plugin-theme-ui'
   ],
 }
