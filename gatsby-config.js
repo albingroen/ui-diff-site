@@ -15,5 +15,5 @@ module.exports = {
       }
     },
     'gatsby-plugin-theme-ui'
-  ],
+  ]
 }
