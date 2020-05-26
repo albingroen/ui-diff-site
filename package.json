@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
-    "gatsby": "^2.21.37",
+    "gatsby": "^2.22.10",
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-source-sanity": "^5.0.6",
     "react": "^16.12.0",
