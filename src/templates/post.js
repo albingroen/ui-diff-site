@@ -19,11 +19,6 @@ const serializers = {
 const Post = ({ data, pageContext }) => {
   const { prev, next } = pageContext
 
-  console.log({
-    prev,
-    next
-  })
-
   return (
     <Layout heading={data.sanityPost.title}>
       <div className="block-content">
