@@ -7,6 +7,14 @@ module.exports = {
         dataset: 'production'
       }
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /static/
+        }
+      }
+    },
     'gatsby-plugin-theme-ui'
   ]
 }

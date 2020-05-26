@@ -2,7 +2,7 @@ export default {
   colors: {
     text: '#333',
     background: '#fff',
-    primary: '#457b9d',
+    primary: '#2ea44f',
     secondary: '#222'
   },
   fonts: {
