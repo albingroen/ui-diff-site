@@ -1,8 +1,8 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx, Flex } from 'theme-ui'
 import BlockContent from '@sanity/block-content-to-react'
 import Gist from 'react-gist'
 import Layout from '../components/simple-layout'
-import { Flex } from 'theme-ui'
 import { graphql, Link } from 'gatsby'
 
 const serializers = {
@@ -16,11 +16,11 @@ const serializers = {
   }
 }
 
-const Post = ({ data, pageContext }) => {
+const Post = ({ data, pageContext, location }) => {
   const { prev, next } = pageContext
 
   return (
-    <Layout heading={data.sanityPost.title}>
+    <Layout heading={data.sanityPost.title} location={location}>
       <div className="block-content">
         <BlockContent
           serializers={serializers}

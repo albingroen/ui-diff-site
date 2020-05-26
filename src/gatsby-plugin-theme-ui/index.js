@@ -26,7 +26,8 @@ export default {
     primary: {
       padding: 3,
       borderRadius: 4,
-      boxShadow: '0 3.5px 10px rgba(0, 0, 0, 0.1)'
+      boxShadow: '0 3.5px 10px rgba(0, 0, 0, 0.1)',
+      background: '#fff'
     }
   }
 }

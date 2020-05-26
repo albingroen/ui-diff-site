@@ -1,15 +1,16 @@
 /** @jsx jsx */
-import { graphql, Link } from 'gatsby'
 import { jsx, Heading, Card } from 'theme-ui'
+import { graphql, Link } from 'gatsby'
 import SimpleLayout from '../components/simple-layout'
 
-const Documentation = ({ data }) => {
+const Documentation = ({ data, ...rest }) => {
   const posts = data.allSanityPost.edges.map(({ node }) => node)
 
   return (
     <SimpleLayout
       heading="Documentation"
       lede="Here you'll find documentation about how to use ui-diff"
+      location={rest.location}
     >
       {posts.map(post => (
         <Link key={post.title} to={`/documentation/${post.slug.current}`}>
