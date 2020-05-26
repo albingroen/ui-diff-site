@@ -11,20 +11,24 @@ exports.createPages = async ({ graphql, actions }) => {
             slug {
               current
             }
+            title
           }
         }
       }
     }
   `)
 
-  result.data.allSanityPost.edges.forEach(({ node }) => {
+  result.data.allSanityPost.edges.forEach(({ node }, i) => {
+    const prevPost = result.data.allSanityPost.edges[i - 1]
+    const nextPost = result.data.allSanityPost.edges[i + 1]
+
     createPage({
       path: `/documentation/${node.slug.current}`,
       component: path.resolve('./src/templates/post.js'),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.slug.current
+        slug: node.slug.current,
+        prev: prevPost,
+        next: nextPost
       }
     })
   })
