@@ -45,8 +45,6 @@ const Navigation = ({ location }) => (
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between'
-        // maxWidth: '1400px',
-        // margin: '0 auto'
       }}
     >
       {navigationItems.map(items => {
