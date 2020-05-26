@@ -3,7 +3,8 @@ export default {
     text: '#333',
     background: '#fff',
     primary: '#2ea44f',
-    secondary: '#222'
+    secondary: '#222',
+    gray: '#ddd'
   },
   fonts: {
     body: 'system-ui, sans-serif',
@@ -28,6 +29,26 @@ export default {
       borderRadius: 4,
       boxShadow: '0 3.5px 10px rgba(0, 0, 0, 0.1)',
       background: '#fff'
+    }
+  },
+  shadows: {
+    default: '0 3.5px 10px rgba(0, 0, 0, 0.1)',
+    large: '0 20px 30px rgba(0, 0, 0, 0.1)'
+  },
+  radii: [3, 5, 7, 10],
+  buttons: {
+    brand: {
+      py: 3,
+      px: 4,
+      fontSize: 3
+    },
+    secondary: {
+      py: 3,
+      px: 4,
+      fontSize: 3,
+      backgroundColor: '#fff',
+      border: '1px solid #ccc',
+      color: '#777'
     }
   }
 }
