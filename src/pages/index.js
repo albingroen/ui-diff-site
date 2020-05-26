@@ -69,6 +69,7 @@ const Home = ({ location }) => {
         sx={{
           margin: '0 auto',
           my: 5,
+          width: '100%',
           maxWidth: '1200px',
           boxShadow: 'large',
           borderRadius: 2
