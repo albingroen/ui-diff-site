@@ -1,8 +1,9 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/simple-layout'
 import BlockContent from '@sanity/block-content-to-react'
 import Gist from 'react-gist'
+import Layout from '../components/simple-layout'
+import { Flex } from 'theme-ui'
+import { graphql, Link } from 'gatsby'
 
 const serializers = {
   types: {
@@ -15,7 +16,14 @@ const serializers = {
   }
 }
 
-const Post = ({ data }) => {
+const Post = ({ data, pageContext }) => {
+  const { prev, next } = pageContext
+
+  console.log({
+    prev,
+    next
+  })
+
   return (
     <Layout heading={data.sanityPost.title}>
       <div className="block-content">
@@ -23,6 +31,20 @@ const Post = ({ data }) => {
           serializers={serializers}
           blocks={data.sanityPost._rawBody}
         />
+        <Flex sx={{ justifyContent: 'space-between', my: 5, fontSize: 3 }}>
+          {prev ? (
+            <Link to={`/documentation/${prev.node.slug.current}`}>
+              Prev: {prev.node.title}
+            </Link>
+          ) : (
+            <div />
+          )}
+          {next && (
+            <Link to={`/documentation/${next.node.slug.current}`}>
+              Next: {next.node.title}
+            </Link>
+          )}
+        </Flex>
       </div>
     </Layout>
   )

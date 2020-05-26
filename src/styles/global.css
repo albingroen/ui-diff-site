@@ -11,6 +11,7 @@ body {
 a {
   text-decoration: none;
   color: initial;
+  font-family: system-ui, sans-serif;
 }
 
 .block-content {
