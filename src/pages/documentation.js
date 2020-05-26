@@ -17,7 +17,8 @@ const Documentation = ({ data }) => {
             sx={{
               borderRightWidth: '5px',
               borderRightStyle: 'solid',
-              borderRightColor: 'primary'
+              borderRightColor: 'primary',
+              marginBottom: 3
             }}
           >
             <Heading sx={{ fontSize: 4, fontWeight: 'body' }}>

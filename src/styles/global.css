@@ -35,7 +35,7 @@ a {
 }
 
 .block-content p {
-  line-height: 150%;
+  line-height: 170%;
   font-family: system-ui, sans-serif;
   font-size: 1.1em;
   margin: 0.5rem 0;
@@ -76,4 +76,17 @@ a {
   content: "$";
   user-select: none;
   opacity: 0.5;
+}
+
+.block-content ol,
+.block-content ul {
+  margin: 1rem 0;
+  margin-left: 1.3rem;
+}
+
+.block-content ol li,
+.block-content ul li {
+  line-height: 200%;
+  font-family: system-ui, sans-serif;
+  font-size: 1.1em;
 }
