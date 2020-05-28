@@ -21,7 +21,7 @@ const navigationItems = [
   ],
   [
     {
-      text: <Button sx={{ py: 3 }}>Get started</Button>,
+      text: <Button variant="primarySmall">Get started</Button>,
       href: 'https://app.ui-diff.com',
       withoutPadding: true
     }

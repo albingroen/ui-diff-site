@@ -13,26 +13,20 @@ const Home = ({ location }) => {
       location={location}
     >
       <Global
-        styles={theme => {
-          console.log({
-            theme
-          })
-
-          return {
-            h1: {
-              fontSize: theme.fontSizes[6],
-              fontFamily: theme.fonts.body,
-              fontWeight: 600
-            },
-            p: {
-              fontSize: theme.fontSizes[3],
-              fontFamily: theme.fonts.body,
-              fontWeight: theme.fontWeights.body,
-              lineHeight: theme.lineHeights.body,
-              opacity: 0.65
-            }
+        styles={theme => ({
+          h1: {
+            fontSize: theme.fontSizes[6],
+            fontFamily: theme.fonts.body,
+            fontWeight: 600
+          },
+          p: {
+            fontSize: theme.fontSizes[3],
+            fontFamily: theme.fonts.body,
+            fontWeight: theme.fontWeights.body,
+            lineHeight: theme.lineHeights.body,
+            opacity: 0.65
           }
-        }}
+        })}
       />
 
       <Flex
@@ -47,7 +41,7 @@ const Home = ({ location }) => {
       >
         <h1>Screenshot Testing for your Website</h1>
 
-        <p sx={{ my: 3, fontSize: 4 }}>
+        <p sx={{ my: 3, fontSize: 3 }}>
           ui-diff is a tool that you and your team can use to quickly get a
           overview of what your website looks like on all of your environments
           and different pages in a few seconds.
@@ -55,27 +49,30 @@ const Home = ({ location }) => {
 
         <Flex sx={{ mt: 4 }}>
           <a href="https://app.ui-diff.com">
-            <Button sx={{ mr: 3 }} variant="brand">
+            <Button sx={{ mr: 3, width: '135px' }} variant="primary">
               Get started
             </Button>
           </a>
           <Link to="/documentation">
-            <Button variant="secondary">Learn more</Button>
+            <Button sx={{ width: '135px' }} variant="secondary">
+              Learn more
+            </Button>
           </Link>
         </Flex>
       </Flex>
 
-      <img
-        sx={{
-          margin: '0 auto',
-          my: 5,
-          width: '100%',
-          maxWidth: '1200px',
-          boxShadow: 'large',
-          borderRadius: 2
-        }}
-        src="https://res.cloudinary.com/albin-groen/image/upload/v1590521800/ui-diff-intro_rzmhfh.jpg"
-      />
+      <Flex sx={{ justifyContent: 'center', alignItems: 'center' }}>
+        <img
+          sx={{
+            my: 5,
+            width: '100%',
+            maxWidth: '1000px',
+            boxShadow: 'large',
+            borderRadius: 2
+          }}
+          src="https://res.cloudinary.com/albin-groen/image/upload/v1590521800/ui-diff-intro_rzmhfh.jpg"
+        />
+      </Flex>
     </Layout>
   )
 }

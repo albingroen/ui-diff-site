@@ -1,3 +1,5 @@
+import { darken, lighten } from '@theme-ui/color'
+
 export default {
   colors: {
     text: '#333',
@@ -37,18 +39,33 @@ export default {
   },
   radii: [3, 5, 7, 10],
   buttons: {
-    brand: {
+    primary: {
       py: 3,
-      px: 4,
-      fontSize: 3
+      transition: '0.2s ease-in-out 0s',
+      '&:hover': {
+        background: darken('primary', 0.1),
+        transition: '0.2s ease-in-out 0s'
+      }
     },
     secondary: {
       py: 3,
-      px: 4,
-      fontSize: 3,
       backgroundColor: '#fff',
       border: '1px solid #ccc',
-      color: '#777'
+      color: '#777',
+      transition: '0.2s ease-in-out 0s',
+      '&:hover': {
+        background: lighten('gray', 0.1),
+        transition: '0.2s ease-in-out 0s'
+      }
+    },
+    primarySmall: {
+      fontSize: 1,
+      p: '0.75rem 0.875rem',
+      transition: '0.2s ease-in-out 0s',
+      '&:hover': {
+        background: darken('primary', 0.1),
+        transition: '0.2s ease-in-out 0s'
+      }
     }
   }
 }
