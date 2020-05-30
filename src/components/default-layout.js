@@ -9,7 +9,7 @@ const DefaultLayout = ({ heading, lede, children, location }) => (
     <div
       sx={{
         padding: 5,
-        paddingTop: '12rem',
+        paddingTop: '10rem',
         maxWidth: '1400px',
         margin: '0 auto'
       }}
