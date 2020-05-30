@@ -6,7 +6,8 @@ export default {
     background: '#fff',
     primary: '#2ea44f',
     secondary: '#222',
-    gray: '#ddd'
+    gray: '#ddd',
+    blue: '#006aff'
   },
   fonts: {
     body: 'system-ui, sans-serif',
@@ -41,6 +42,7 @@ export default {
   buttons: {
     primary: {
       py: 3,
+      px: 4,
       transition: '0.2s ease-in-out 0s',
       '&:hover': {
         background: darken('primary', 0.1),
@@ -66,6 +68,20 @@ export default {
         background: darken('primary', 0.1),
         transition: '0.2s ease-in-out 0s'
       }
+    }
+  },
+  badges: {
+    primary: {
+      p: 2,
+      px: 3,
+      fontWeight: 'body',
+      backgroundColor: 'white',
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: '#ddd',
+      color: '#aaa',
+      fontSize: 1,
+      borderRadius: 1
     }
   }
 }
